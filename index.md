@@ -22,3 +22,5 @@ Horizontal Line:
 print '3 backticks or'
 print 'indent 4 spaces'
 ```
+[Lab Report 1](lab-report-1-week-2.html)
+[Lab Report 1](https://Ayuzzz127.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
