@@ -1,6 +1,7 @@
 # Yucheng's Week 2 Lab Report
-Hi, my name is Yucheng and this is my first lab report for CSE 15L. I'm going to give you and myself a tutorial about how to log into a course-specific account on `ieng6`. 
-<img src="dou.PNG" width="50%"></img>Here's my little dog.
+Hi, my name is Yucheng and this is my first lab report for CSE 15L. I'm going to give you and myself a tutorial about how to log into a course-specific account on `ieng6`.
+
+<img src="dou.PNG" width="50%"></img>This is my little dog.
 ## Step 1: Intalling VS Code
 First of all, you need to have VScode on your computer. Here's the link for VScode intalling: [vscode](https://code.visualstudio.com/). Select your system and download it, and then open, you will find this:
 ![vs](vscode.PNG)
