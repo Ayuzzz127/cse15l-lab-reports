@@ -62,7 +62,7 @@ ieng6-203   15:55:01   5   2.30,  2.27,  2.22
 Sun Apr 10, 2022  3:57pm - Prepping cs15lsp22
 ```
 This one is from my account. I use code block here instead of screenshot. They are just the same.
-Now, your computer is called the *client* and the computer in the basement the *server* based on how you are connected. Great!
+Now, your computer is called the *client* and the computer in the basement the *server*. Great!
 
 ## Step 3: Let's try some command.
 Try running the commands `cd`, `ls`, `pwd`, `mkdir`, and `cp`. Both on your computer, and on the remote computer after ssh-ing. Here's my tries: ![1](command1.PNG) ![2](command2.PNG) ![3](command3.PNG)
