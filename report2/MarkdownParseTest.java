@@ -1,3 +1,4 @@
+package report2;
 import static org.junit.Assert.*;
 import java.beans.Transient;
 import java.io.IOException;
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.*;
+
 public class MarkdownParseTest {
     @Test
     public void addition() {
@@ -14,9 +16,9 @@ public class MarkdownParseTest {
     }
     @Test
     public void Link() throws IOException{
-        Path fileName = Path.of("test-file8.md");
+        Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> links = MarkdownParseori.getLinks(content);
         assertEquals(links, List.of("a link on the first line"));
     }
 }

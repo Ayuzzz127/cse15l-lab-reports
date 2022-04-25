@@ -1,3 +1,4 @@
+package report2;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,30 +11,29 @@ public class MarkdownParseori {
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
-            if (markdown.indexOf("[", currentIndex) == -1) {
+            int openBracket = markdown.indexOf("[", currentIndex);
+            if(openBracket == -1){
                 break;
             }
-            if (markdown.indexOf("!", currentIndex) == markdown.indexOf("[", currentIndex)-1) {
-                currentIndex+=2;
-                continue;
-            }
-            int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
-            int openParen = markdown.indexOf("(", closeBracket);
-            if (markdown.indexOf("https://", openParen) == -1) {
-                currentIndex++;
-                continue;
+            if(markdown.indexOf("(", closeBracket) == -1){
+                break;
             }
+            if(markdown.indexOf("(", closeBracket) != markdown.indexOf("]", openBracket) + 1){
+                break;
+            }
+            int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
+
         return toReturn;
     }
 
-
     public static void main(String[] args) throws IOException {
-        Path fileName = Path.of(args[0]);
+        // Path fileName = Path.of(args[0]);
+        Path fileName = Path.of("report2/test-file5.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
