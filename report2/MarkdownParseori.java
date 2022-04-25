@@ -12,12 +12,18 @@ public class MarkdownParseori {
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
-            if(openBracket == -1){
+            int closeBracket = markdown.indexOf("]", openBracket);
+            if(openBracket == -1 || closeBracket == -1){
                 break;
             }
-            int closeBracket = markdown.indexOf("]", openBracket);
+            if(markdown.indexOf("(", closeBracket) != closeBracket + 1){
+                break;
+            }
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
+            if(openParen == -1 || closeParen == -1){
+                break;
+            }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
