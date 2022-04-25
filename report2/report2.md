@@ -2,7 +2,7 @@
 In this week's report, I will write about some changes I made to fix a bug. I will list three of them in this report. Let's start with the first one.
 <img src="dou.PNG" width="50%"></img>
 ## The first one: Stop infinite loop
-![change](change1.PNG)
+![change](change.PNG)
 I applied this change because I find an error when I run with [test-file](test-file.md). The output of running is ![error1](error1.PNG)
 The first bug is about 
 ```
