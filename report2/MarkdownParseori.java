@@ -12,16 +12,7 @@ public class MarkdownParseori {
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
-            if(openBracket == -1){
-                break;
-            }
             int closeBracket = markdown.indexOf("]", openBracket);
-            if(markdown.indexOf("(", closeBracket) == -1){
-                break;
-            }
-            if(markdown.indexOf("(", closeBracket) != markdown.indexOf("]", openBracket) + 1){
-                break;
-            }
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             toReturn.add(markdown.substring(openParen + 1, closeParen));
@@ -32,8 +23,7 @@ public class MarkdownParseori {
     }
 
     public static void main(String[] args) throws IOException {
-        // Path fileName = Path.of(args[0]);
-        Path fileName = Path.of("report2/test-file5.md");
+        Path fileName = Path.of(args[0]);
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
