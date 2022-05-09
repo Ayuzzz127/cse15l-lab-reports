@@ -10,4 +10,4 @@ Then we can also directly using scp with the alias I chose:
 ![scp](scp.PNG)
 This case we copy test-file.md from my computer to the account.
 ## The second one: Setup Github Access from ieng6
-nihao
+nihao12
