@@ -25,8 +25,9 @@ For my own case, I copy the whole cse15l directory to my ieng6 account:
 Then we try compile and run the test in my account:
 ![test](test.PNG)
 We success!
-Just like what we did in lab 1, we can use `;` to combine command in one line:
-![scp-test](scp-test.PNG)
+Just like what we did in lab 1, we can use `;` to combine command in one line and `""` to use command after log in:
+![scp-test](multi1.PNG)
+![scp-test](multi2.PNG)
 It will do the things we did seperately above in one line.
 # The End
 ![dc](dead-cells.PNG)
